@@ -1,8 +1,5 @@
 <?php
-require './App/Database/Connection.php';
 require "./App/Model/PontoModel.php";
-require "./App/Model/FuncionarioModel.php";
-require "./App/Services/PontoService.php";
 
 class PontoController
 {
@@ -22,6 +19,8 @@ class PontoController
     public function saida(FuncionarioModel $funcionario){
         $conn = new Connection();
 
-        return 'saida';
+        $pontoService = new PontoService($conn, $funcionario);
+
+        return $pontoService->saida();
     }
 }
