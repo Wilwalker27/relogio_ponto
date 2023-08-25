@@ -1,0 +1,1 @@
+um crud basico e dps registrar a entrada de funcionarios, a saida, quanto tempo permaneceu, e n pode registrar saida sem nao ter entrado, e nem colocar pra entrar ja tendo registrado entrada
