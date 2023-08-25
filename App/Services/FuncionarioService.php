@@ -63,7 +63,7 @@ class FuncionarioService
                     id = :id
             ';
             $stmt = $this->connection->prepare($query);
-            $stmt->bindValue('id', $this->funcionario->__get('id'));
+            $stmt->bindValue('id', $this->funcionario->id);
             $stmt->execute();
 
             $funcionario = $stmt->fetch(PDO::FETCH_OBJ);
@@ -87,7 +87,7 @@ class FuncionarioService
                         id = :id 
                 ';
                 $stmt = $this->connection->prepare($query);
-                $stmt->bindValue(':id', $this->funcionario->__get('id'));
+                $stmt->bindValue(':id', $this->funcionario->id);
                 $stmt->bindValue(':is_working', 1);
                 $stmt->execute();
     
@@ -107,7 +107,7 @@ class FuncionarioService
                         id = :id 
                 ';
                 $stmt = $this->connection->prepare($query);
-                $stmt->bindValue(':id', $this->funcionario->__get('id'));
+                $stmt->bindValue(':id', $this->funcionario->id);
                 $stmt->bindValue(':is_working', 0);
                 $stmt->execute();
     
