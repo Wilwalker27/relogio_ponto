@@ -1,9 +1,9 @@
 <?php
 class Connection
 {
-    private $DSN = 'mysql:host=localhost;dbname=project';
-    private string $user = 'root';
-    private string $password = 'root';
+    private $DSN = 'mysql:host=localhost;dbname=time_clock'; // nome da database do mysql
+    private string $user = 'root'; // nome de usário para acesso ao banco de dados
+    private string $password = 'root'; // senha de usário para acesso ao banco de dados
 
     public function connect(){
         try {

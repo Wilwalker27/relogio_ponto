@@ -6,7 +6,7 @@ class FuncionarioController
     private $id;
     public function __construct($id = null)
     {
-        $this->connection = new Connection();
+        $this->connection = new Connection(); // conexão com a tabela de funcionários
         $this->id = $id;
     }
     public function create($funcionario)

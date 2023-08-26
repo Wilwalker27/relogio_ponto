@@ -1,11 +1,11 @@
 <?php
 require "./App/Model/PontoModel.php";
 
-class PontoController
+class PontoController // registrar a chegada dos funcionários no BD
 {
     public function entrada(FuncionarioModel $funcionario){
         try {
-            # Conexao com o bd
+            # Conexão com o BD
             $conn = new Connection();
 
             $pontoService = new PontoService($conn, $funcionario);
@@ -16,7 +16,7 @@ class PontoController
         }
     }
 
-    public function saida(FuncionarioModel $funcionario){
+    public function saida(FuncionarioModel $funcionario){ // registrar a saída dos funcionários
         $conn = new Connection();
 
         $pontoService = new PontoService($conn, $funcionario);
