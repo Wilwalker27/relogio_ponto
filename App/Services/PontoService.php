@@ -40,7 +40,7 @@ class PontoService
                 throw new Exception("Usuário não existe");
             }
         } catch (\Throwable $th) {
-            return $th;
+            return "Erro ao recuperar os horarios";
         }
     }
 
@@ -63,7 +63,7 @@ class PontoService
                 return 'O funcionário entrou na empresa';
                 //return 'O funcionario entrou na empresa!';
             } catch (\Throwable $th) {
-                return $th;
+                return "Aconteceu um erro ao recuperar o funcionário";
             }
         } else{
             return 'O funcionário já esta na empresa';
@@ -116,7 +116,7 @@ class PontoService
                     return 'O funcionário não esta na empresa!';
                 }
             } catch (\Throwable $th) {
-                return $th;
+                return "Aconteceu um erro ao recuperar o funcionário";
             }
         } else{
             return 'O funcionário não esta na empresa!';
