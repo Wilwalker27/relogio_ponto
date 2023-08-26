@@ -1,0 +1,14 @@
+body {
+
+
+    background: linear-gradient(to bottom right, #86A8CF, #2B124C);
+    margin: 0; /* para remover as margens padrão do body*/
+    padding: 0; /* também para remover o preenchimento padrão do body */
+    font-family: Arial, sans-serif; /*fonte padrão*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+

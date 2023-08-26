@@ -12,15 +12,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Lista de Funcionários</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Lista de Funcionários e Horas Trabalhadas</h1>
+        <h1 class="text-center">Lista de Funcionários e Banco de horas</h1>
         <div class="mt-4">
             <a href="index.php" class="btn btn-primary">Home</a>
-            <a href="criarFuncionario.php" class="btn btn-primary">Criar funcionário</a>
         </div>
         <table class="table mt-4">
             <thead>
@@ -45,7 +45,7 @@
                 </tr>
                 <?php } ?>
                 
-                <!-- Adicione mais linhas conforme necessário -->
+            
             </tbody>
         </table>
     </div>

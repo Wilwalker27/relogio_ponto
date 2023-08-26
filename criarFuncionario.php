@@ -10,12 +10,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Funcionário</title>
+    <link rel="icon" href="./imagens/icone_configs.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cadastro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Registrar Funcionário</h1>
+        <h1 class="text-center">Cadastrar novo funcionário</h1>
         <div class="mt-4">
             <a href="index.php" class="btn btn-primary">Home</a>
         </div>
