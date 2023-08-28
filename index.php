@@ -29,6 +29,9 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Registrar horário de entrada</button>
                 </form>
+                <div class="mt-5">
+                    <a href="horarioTrabalhado.php" class="btn btn-primary">Acessar banco de horas</a>
+                </div>
 
                 <?php
                     if (isset($_POST['id_funcionario_entrada'])) {
@@ -55,6 +58,7 @@
                 <div class="mt-5"> 
                     <a href="criarFuncionario.php" class="btn btn-primary">Novas inscrições</a>
                 </div>
+                
                 <?php
                     if (isset($_POST['id_funcionario_saida'])) {
                         $funcionario = new FuncionarioModel();
@@ -66,7 +70,9 @@
                 <?php
                     }
                 ?>
+            
             </div>
+            
         </div>
     </div>
     
