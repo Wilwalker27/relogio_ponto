@@ -33,6 +33,7 @@
                     <th>Data de entrada</th>
                     <th>Horario de entrada</th>
                     <th>Horio de saida</th>
+                    <th>Deletar o funcionario</th>
                 </tr>
             </thead>
             <tbody>
@@ -55,6 +56,7 @@
                     <td><?= "$dataEntrada" ?></td>
                     <td><?= "$horarioEntrada" ?></td>
                     <td><?= "$horarioSaida" ?></td>
+                    <td><a href="delete.php?id=<?= $funcionario->id ?>" class="btn btn-sm btn-danger">Deleter o funcionário <?= $funcionario->name ?> </a></td>
                 </tr>
                 <?php }} ?>
                 

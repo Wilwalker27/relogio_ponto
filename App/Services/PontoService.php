@@ -123,25 +123,35 @@ class PontoService
         }
     }
 
-    public function deleteFuncionario($idPonto)
+    public function deleteFuncionario($id)
     {
-        if (!empty($idPonto)) {
+        if (!empty($id)) {
             try {
                 $query = '
-                DELETE FROM 
-                    funcionarios 
-                WHERE 
-                    id = :id
-            ';
-            $stmt = $this->connection->prepare($query);
-            $stmt->bindValue(':id', $idPonto);
-            $stmt->execute();
-            header('Location:horarioTrabalhado.php');
+                    DELETE FROM 
+                        pontos 
+                    WHERE 
+                        `id_funcionario` = :id_funcionario
+                ';
+                $stmt = $this->connection->prepare($query);
+                $stmt->bindValue(':id_funcionario', $id);
+                $stmt->execute();
+                
+                $query = '
+                    DELETE FROM 
+                        funcionarios 
+                    WHERE (`id` = :id)
+                ';
+                $stmt = $this->connection->prepare($query);
+                $stmt->bindValue(':id', $id);
+                $stmt->execute();
+                
+                header("Location:horarioTrabalhado.php");
             } catch (\Throwable $th) {
-                return "Aconteceu algum erro!";
+                header("Location:horarioTrabalhado.php");
             }
         } else {
-            return 'Nome invalido';
+            return 'Funcionario inválido';
         }
         
     }
