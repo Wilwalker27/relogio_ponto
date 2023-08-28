@@ -38,10 +38,9 @@ class FuncionarioController
 
         $funcionario->__set('id',$this->id);
 
-        $funcionarioService = new FuncionarioService($this->connection, $funcionario);
         $horario = new PontoService($this->connection, $funcionario);
         $horario = $horario->getHorarios();
         
-        return $funcionarioService->getWorkTime($horario);
+        return $horario;
     }
 }

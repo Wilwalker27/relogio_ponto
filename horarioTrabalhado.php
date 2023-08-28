@@ -27,7 +27,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Nome do Funcionário</th>
-                    <th>Horas Trabalhadas</th>
+                    <th>Data de entrada</th>
+                    <th>Horario de entrada</th>
+                    <th>Horio de saida</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,15 +37,23 @@
                     foreach ($funcionarios->getAllFuncionarios() as $key => $funcionario) {
                         $tempoTrabalhado = new FuncionarioController($funcionario->id);
                         $tempoTrabalhado = $tempoTrabalhado->workTime();
-                        $minutosTrabalhado = $tempoTrabalhado['minutos'];
-                        $horasTrabalhada = $tempoTrabalhado['horas'];
+                        foreach ($tempoTrabalhado  as $key => $funcionarioTempo) {
+                            # Separa a data e as horas e transforma em um array
+                            $partsEntrada = explode(" ", $funcionarioTempo->horario_entrada);
+                            $partsSaida = explode(" ", $funcionarioTempo->horario_saida);
+                            # Coloca cada parte do array em seu lugar
+                            $dataEntrada = $partsEntrada[0];
+                            $horarioEntrada = $partsEntrada[1];
+                            $horarioSaida = $partsSaida[1];
                 ?>
                 <tr>
                     <th><?= $funcionario->id ?></th>
                     <td><?= $funcionario->name ?></td>
-                    <td><?= "$horasTrabalhada horas e $minutosTrabalhado minutos" ?></td>
+                    <td><?= "$dataEntrada" ?></td>
+                    <td><?= "$horarioEntrada" ?></td>
+                    <td><?= "$horarioSaida" ?></td>
                 </tr>
-                <?php } ?>
+                <?php }} ?>
                 
             
             </tbody>
