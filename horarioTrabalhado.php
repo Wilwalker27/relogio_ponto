@@ -33,6 +33,7 @@
                     <th>Data de entrada</th>
                     <th>Horario de entrada</th>
                     <th>Horio de saida</th>
+                    <th>Deletar o funcionario</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,6 +47,7 @@
                             $partsSaida = explode(" ", $funcionarioTempo->horario_saida);
                             # Coloca cada parte do array em seu lugar
                             $dataEntrada = $partsEntrada[0];
+                            $dataEntrada = date("d-m-Y", strtotime($dataEntrada));
                             $horarioEntrada = $partsEntrada[1];
                             $horarioSaida = $partsSaida[1];
                 ?>
@@ -55,6 +57,7 @@
                     <td><?= "$dataEntrada" ?></td>
                     <td><?= "$horarioEntrada" ?></td>
                     <td><?= "$horarioSaida" ?></td>
+                    <td><a href="delete.php?id=<?= $funcionario->id ?>" class="btn btn-sm btn-danger">Deleter o funcionário <?= $funcionario->name ?> </a></td>
                 </tr>
                 <?php }} ?>
                 

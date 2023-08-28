@@ -10,8 +10,9 @@ if (isset( $_GET['id']) && !empty($_GET['id'])) {
 
     $pontoController = new PontoController();
 
-    $pontoController->delete($id);
-
+    echo $pontoController->delete($_GET['id']);
+    #echo $_GET['id'];
+    #header("Location:horarioTrabalhado.php");
 }else {
     header("Location:horarioTrabalhado.php");
 }
