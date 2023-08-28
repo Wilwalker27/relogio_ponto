@@ -3,3 +3,5 @@ O projeto consiste em um registro e controle de entrada de funcionários em um p
 
 Tecnologias utilizadas: PHP, HTML5, CSS5, Bootstrap, MySQL Workbench, GIT.
 
+Destinado a W5i.
+
