@@ -48,7 +48,7 @@ class FuncionarioService
 
             return $funcionario;
         } catch (\Throwable $th) {
-            return $th;
+            return [];
         }
     }
     public function getFuncionario()
