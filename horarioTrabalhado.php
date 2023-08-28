@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./imagens/icone_configs.png" type="image/png">
     <title>Lista de Funcionários</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
@@ -20,7 +21,9 @@
     <div class="container mt-5">
         <h1 class="text-center">Lista de Funcionários e Banco de horas</h1>
         <div class="mt-4">
-            <a href="index.php" class="btn btn-primary">Home</a>
+        <a href="index.php" class="btn">
+        <img src=".\imagens\botao-voltar.png" alt="Home">
+        </a>
         </div>
         <table class="table mt-4">
             <thead>
