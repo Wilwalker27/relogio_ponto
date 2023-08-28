@@ -16,8 +16,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+<<<<<<< HEAD
     <div class="container mt-5">
         <h1 class="text-center mb-5">Registro Eletrônico de Ponto</h1>
+=======
+    <div class="container">
+        <h1 class="text-center">Registro Eletrônico de Ponto</h1>
+>>>>>>> 0a767c36e9ea8d507acfa99d4d1a34380be28f3d
         
         <div class="row mt-4">
             <div class="col-md-6">
@@ -28,6 +33,9 @@
                         <input type="text" name="id_funcionario_entrada" class="form-control" id="entradaNome" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Registrar horário de entrada</button>
+                    <div class="mt-5">
+                    <a href="horarioTrabalhado.php" class="btn btn-primary">Acessar banco de horas</a>
+                </div>
                 </form>
                 <div class="mt-4">
                     <a href="horarioTrabalhado.php" class="btn btn-primary">Acessar banco de horas</a>
@@ -59,6 +67,10 @@
                 <div class="mt-4"> 
                     <a href="criarFuncionario.php" class="btn btn-primary">Novas inscrições</a>
                 </div>
+<<<<<<< HEAD
+=======
+                
+>>>>>>> 0a767c36e9ea8d507acfa99d4d1a34380be28f3d
                 <?php
                     if (isset($_POST['id_funcionario_saida'])) {
                         $funcionario = new FuncionarioModel();
