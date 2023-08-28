@@ -47,6 +47,7 @@
                             $partsSaida = explode(" ", $funcionarioTempo->horario_saida);
                             # Coloca cada parte do array em seu lugar
                             $dataEntrada = $partsEntrada[0];
+                            $dataEntrada = date("d-m-Y", strtotime($dataEntrada));
                             $horarioEntrada = $partsEntrada[1];
                             $horarioSaida = $partsSaida[1];
                 ?>
