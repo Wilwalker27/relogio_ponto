@@ -7,7 +7,7 @@ class PontoService
     private $funcionario;
     private $funcionarioService;
 
-    public function __construct(Connection $conn, FuncionarioModel $funcionario)
+    public function __construct(Connection $conn, FuncionarioModel $funcionario = null)
     {
         $this->connection = $conn->connect();
         $this->funcionarioService = new FuncionarioService($conn, $funcionario);
@@ -121,5 +121,28 @@ class PontoService
         } else{
             return 'O funcionário não esta na empresa!';
         }
+    }
+
+    public function deleteFuncionario($idPonto)
+    {
+        if (!empty($idPonto)) {
+            try {
+                $query = '
+                DELETE FROM 
+                    funcionarios 
+                WHERE 
+                    id = :id
+            ';
+            $stmt = $this->connection->prepare($query);
+            $stmt->bindValue(':id', $idPonto);
+            $stmt->execute();
+            header('Location:horarioTrabalhado.php');
+            } catch (\Throwable $th) {
+                return "Aconteceu algum erro!";
+            }
+        } else {
+            return 'Nome invalido';
+        }
+        
     }
 }

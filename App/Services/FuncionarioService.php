@@ -139,7 +139,7 @@ class FuncionarioService
     $somatoriaHoras += floor($somatoriaMinutos / 60);
     $somatoriaMinutos = $somatoriaMinutos % 60;
 
-    return ["horas" => $somatoriaHoras, "minutos" => $somatoriaMinutos];
+    return ["entrada" => $horario->horario_entrada, "minutos" => $horario->horario_saida];
 }
 
 }

@@ -23,4 +23,11 @@ class PontoController // registrar a chegada dos funcionários no BD
 
         return $pontoService->saida();
     }
+    public function delete($id){ // registrar a saída dos funcionários
+        $conn = new Connection();
+
+        $pontoService = new PontoService($conn);
+
+        return $pontoService->deleteFuncionario($id);
+    }
 }
