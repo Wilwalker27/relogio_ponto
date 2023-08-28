@@ -39,9 +39,7 @@
                         $entrada = new PontoController();
                         $entrada = $entrada->entrada($funcionario);
                 ?>
-                        <script>
-                            alert("<?= $entrada ?>");
-                        </script>
+                        <?= $entrada ?>
                 <?php
                     }
                 ?>
@@ -67,9 +65,7 @@
                         $saida = new PontoController();
                         $saida = $saida->saida($funcionario);
                 ?>
-                        <script>
-                            alert("<?= $saida ?>");
-                        </script>
+                        <?= $saida ?>
                 <?php
                     }
                 ?>
