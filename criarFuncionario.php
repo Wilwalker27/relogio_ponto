@@ -17,10 +17,10 @@
 </head>
 <body>
     <div class="container mt-5">
+        <a href="index.php" class="btn">
+            <img src=".\imagens\botao-voltar.png" alt="Home">
+        </a>
         <h1 class="text-center">Cadastrar novo funcionário</h1>
-        <div class="mt-4">
-        
-        </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6">
                 <form method="post">
@@ -28,7 +28,6 @@
                         <label for="nomeFuncionario" class="form-label">Nome do Funcionário</label>
                         <input type="text" name="nome_funcionario" class="form-control" id="nomeFuncionario" required>
                     </div>
-                    <a href="index.php" class="btn btn-primary">Retornar</a>
                     <button type="submit" class="btn btn-primary">Registrar</button>
                 </form>
                 <?php

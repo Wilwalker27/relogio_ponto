@@ -28,9 +28,6 @@
                         <input type="text" name="id_funcionario_entrada" class="form-control" id="entradaNome" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Registrar horário de entrada</button>
-                    <div class="mt-5">
-                    <a href="horarioTrabalhado.php" class="btn btn-primary">Acessar banco de horas</a>
-                </div>
                 </form>
 
                 <?php

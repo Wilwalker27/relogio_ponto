@@ -113,7 +113,7 @@ class PontoService
                         return $th;
                     }
                 }else {
-                    return 'O funcionário não esta na empresa!';
+                    return 'Não existe esse funcionario ainda';
                 }
             } catch (\Throwable $th) {
                 return "Aconteceu um erro ao recuperar o funcionário";
